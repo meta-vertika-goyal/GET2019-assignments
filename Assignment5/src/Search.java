@@ -41,7 +41,7 @@ public class Search {
 	{
 		if(inputArray.length==0)
 			throw new AssertionError("Array is empty");
-		int index=binarySearch(inputArray,numSearch,0,inputArray.length);
+		int index=binarySearch(inputArray,numSearch,0,inputArray.length-1);
 		return index;
 	}
 
