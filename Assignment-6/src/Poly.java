@@ -2,10 +2,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 
-public class Poly {
-	Term[] polynomial;
+public final class Poly {
+	private Term[] polynomial;
 	
-	int numberOfTerms;
+	private int numberOfTerms;
 	/*
 	 * This is a constructor to set the initials field values
 	 */
@@ -18,6 +18,11 @@ public class Poly {
 	 * This method returns the degree of the polynomial
 	 * @return integer degree of the polynomial
 	 */
+	public Term[] getPolynomialArray()
+	{
+		Term[] copy=(Term[]) Arrays.copyOf(this.polynomial,this.numberOfTerms);
+		return copy;
+	}
 	public int degree()
 	{
 		int degree=0;
