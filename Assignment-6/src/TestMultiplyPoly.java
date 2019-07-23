@@ -40,9 +40,9 @@ public class TestMultiplyPoly {
 		expectedResult[6]=termThree7;
 		expectedResult[7]=termThree8;
 		Poly expectedSum=new Poly(expectedResult,8);
-        for(int i=0;i<actualSumPoly.polynomial.length;i++)
+        for(int i=0;i<actualSumPoly.getPolynomialArray().length;i++)
         {
-        	Term temp=actualSumPoly.polynomial[i];
+        	Term temp=actualSumPoly.getPolynomialArray()[i];
         	Term temp2=expectedResult[i];
         	assertEquals(temp.coefficient,temp2.coefficient);
         	assertEquals(temp.exponent,temp2.exponent);
