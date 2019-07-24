@@ -20,9 +20,13 @@ public class TestEvaluateTranspose {
 		inputMatrix.add(matrix1element3);
 		inputMatrix.add(matrix1element4);
 		ArrayList<Element> transposeMatrix=new ArrayList<Element>();
+		transposeMatrix.add(matrix2element1);
+		transposeMatrix.add(matrix2element2);
+		transposeMatrix.add(matrix2element3);
+		transposeMatrix.add(matrix2element4);
 		SparseMatrix sm1=new SparseMatrix(inputMatrix,5,5);
 		SparseMatrix actualTransposeMatrix=SparseMatrix.evaluateTranspose(sm1);
-		ArrayList<Element> actualTransposeList=new ArrayList<Element>();
+		ArrayList<Element> actualTransposeList=actualTransposeMatrix.getSparseMatrix();
 		for(int i=0;i<actualTransposeList.size();i++)
 		{
 			Element element1=transposeMatrix.get(i);
