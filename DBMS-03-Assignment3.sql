@@ -75,7 +75,7 @@ inner join product_category pc
 on p.product_id = pc.product_id
 inner join category c
 on pc.category_id = c.category_id
-where c.category_id = 'cat04' or c.parent_id = 'cat04';
+where c.category_id = 'Electronics' or c.parent_id in (select category_id from category where category_name='Electronics')
 
 -- Display top 10 Items which were cancelled most.
 
