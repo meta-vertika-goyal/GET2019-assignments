@@ -65,9 +65,10 @@ public class Queries {
 	 * @return sql query
 	 */
 	public String query4() {
-		String query4 = " SELECT p.category_name, count(p.parent_id) as SubCategories"
+		String query4 = " SELECT c.category_name, count(p.category_id) as SubCategories"
 				+ " FROM category c INNER JOIN category p"
 				+ " ON  c.parent_id = p.category_id "
+				+ " WHERE c.parent_id == 'top category' "
 				+ " GROUP BY p.category_id "
 				+ " ORDER BY p.category_name ";
 		
