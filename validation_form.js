@@ -9,8 +9,9 @@ function validateForm() {
     var r4 = validateConfirmPassword();
     var r5 = validateContact();
     var r6 = validateGender();
-    var testing = r1 && r2 && r3 && r4 && r5 && r6;
-    return testing;
+    var isValid = (r1 && r2 && r3 && r4 && r5 && r6);
+    document.getElementById('isValid').value =isValid;
+    return isValid;
 }
 
 /*
@@ -22,6 +23,7 @@ function validateFullName() {
     var expression = /^[a-zA-Z ]*$/;
     var result = expression.test(x) ;
     if( result === true && document.getElementById("full_name").value.length > 2 ) {
+    document.getElementById("full_name_validation").innerHTML="";
      return true;
     } else {
         document.getElementById("full_name_validation").innerHTML="The entered name is not valid";
@@ -41,6 +43,7 @@ function validateEmail() {
         document.getElementById("email_validation").innerHTML="Please enter a valid e-mail address!!";
         return false;
     } else {
+    	document.getElementById("email_validation").innerHTML="";
         return true;
     }  
 }
@@ -57,6 +60,7 @@ function validatePassword() {
     var expression4 = /[@#%]+/;
     var result = expression1.test(x) && expression2.test(x) && expression3.test(x) && expression4.test(x);
     if ( result === true &&  x.length > 8  ) {
+        document.getElementById("password_validation").innerHTML="";
         return true;
     } else {
         document.getElementById("password_validation").innerHTML="Your password should contain atleast one  <br/> Uppercase, Lowercase,  Alphanumeric character and <br/> it  should  have  minimum length <br/> of 8 characters!!!!";
@@ -77,6 +81,7 @@ function validateConfirmPassword(){
         document.getElementById("confirm_password_validation").innerHTML="Both the passwords do not match!!!";
         return false;
     } else {
+    	document.getElementById("confirm_password_validation").innerHTML="";
         return true;
     }
 }
@@ -90,6 +95,7 @@ function validateContact() {
     var expression = /^[0-9]+$/;
     var result = expression.test(x) ;
     if ( result === true  &&  x.length > 8 ) {
+    document.getElementById("contact_validation").innerHTML="";
         return true;
     } else {
         document.getElementById("contact_validation").innerHTML="Please enter a valid conact no!!";
@@ -118,6 +124,7 @@ function validateVehicleForm() {
     var valid = false;
     if( document.getElementById("male").checked || document.getElementById("female").checked ) {
         valid = true;
+        document.getElementById("gender_validation").innerHTML = "";
         return valid;
     } else {
         document.getElementById("gender_validation").innerHTML = " Please select a gender!!";
