@@ -1,6 +1,9 @@
 package com.metacube.get2019.model.dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.internal.util.stereotypes.Immutable;
 
 /**
  * DTO class for the VehicleRegistrationForm
@@ -11,15 +14,19 @@ public class VehicleForm {
 	
 	//validation constraints
 	@NotBlank(message="{requiredField}")
+	@Pattern(regexp="^[a-zA-Z ]*$",message="{onlyLetters}")
 	private String vehicleName;
 	
 	@NotBlank(message="{requiredField}")
 	private String vehicleType;
 	
 	@NotBlank(message="{requiredField}")
+	@Pattern(regexp="^[A-Za-z]{2}[0-9]{2}[A-Za-z]{2}[0-9]{4}$",message="{validVehicleNumber}")
 	private String vehicleNumber;
 	
+	@Immutable
 	private int employeeId;
+	
 	
 	private String identification;
 	
@@ -54,4 +61,6 @@ public class VehicleForm {
 	public void setIdentification(String identification) {
 		this.identification = identification;
 	}
+}
+
 }
