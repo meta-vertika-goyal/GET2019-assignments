@@ -26,7 +26,7 @@ public class SignUpForm {
 	@Email(message="{emailFormat}")
 	private String email;
 	
-	@Pattern(regexp = "(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}", message = "{passwordValidation}")
+	@Pattern(regexp = "(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[@*$])(?=.*?[0-9]).{8,}", message = "{passwordValidation}")
 	private String password;
 	
 	@NotBlank(message="{requiredField}")
