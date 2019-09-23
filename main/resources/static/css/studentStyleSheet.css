@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+/*
+Style sheet for the student application
+*/
+input[type="button"]{
+width:30%;
+
+}
+h4{
+margin:25px;
+color:black;}
+div{
+background-color:lightgrey;
+border-radius:10px;
+width:80%;
+height:80%;
+padding:25px;
+margin:auto;
+margin-top:30px;
+}
+
+th{
+text-align:center;
+}
+label{
+text-align:left;
+font-size:18px;
+font-family: Times New Roman}
+h1{
+font-family: Times New Roman;
+text-align:center;
+margin:10px;
+color:black;}
+p{
+	text-align:center;
+}
+div.studentDiv{
+padding:1px;
+text-align:left;
+
+}
+
+h1{
+font-family: Times New Roman;
+text-align:center;
+margin:20px;
+color:black;}
