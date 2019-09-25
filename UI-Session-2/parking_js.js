@@ -1,16 +1,15 @@
-function collapse(id){
-	
-	if(id==="employee_registration"){
-
-		
-		var form=document.getElementById("EmployeeRegistration");
-		if(form.style.display=="none"){
-			
-			form.style.display="block";
-		}
-			else if(form.style.display=="block"){
-				form.style.display="none";
-			}
-		}
-		
-	}
+/*
+javascript for meta parking*/
+var coll = document.getElementsByClassName("heading_block");
+var i;
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
