@@ -1,4 +1,4 @@
-    body {
+    * {
         text-decoration: none;
         color: white;
         font-family: myFirstFont;
@@ -17,6 +17,11 @@
     @font-face {
         font-family: myThirdFont;
         src: url(fonts/ubuntu-m.ttf);
+    }
+    
+    @font-face {
+        font-family: myFourthFont;
+        src: url(fonts/ubuntu-.ttf);
     }
     
     header {
@@ -91,18 +96,19 @@
         text-align: center;
         font-size: 3em;
         margin-right: 25px;
+        margin-bottom: 10px;
     }
     
     .subheading {
         color: gray;
         text-align: center;
         font-size: 1.5em;
-        font-family: mySecondFont;
+        font-family: myThirdFont;
         margin-right: 25px;
     }
     
-    .PerfectFeatures {
-        margin-top: 90px;
+    .section_heading {
+        margin-top: 150px;
     }
     
     .perfectFeaturesContent {
@@ -112,6 +118,12 @@
         margin-top: 150px;
         padding-left: 200px;
         padding-right: 300px;
+    }
+    
+    .PerfectFeatureImage {
+        margin-top: 200px;
+        text-align: center;
+        border: solid black;
     }
     
     .featurePoint {
@@ -130,7 +142,7 @@
     
     .para_subheading {
         color: gray;
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-family: mySecondFont;
     }
     
@@ -139,45 +151,256 @@
         padding-top: 40px;
         align-self: flex-start;
     }
-
-    .footer_section{
+    
+    #img1 {
+        transform: skewY(5deg);
+    }
+    
+    #img3 {
+        transform: skewY(-5deg);
+    }
+    
+    .ScreenshotsContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 200px;
+        margin-left: 100px;
+    }
+    
+    .screenshotPoint1 {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 50px;
+    }
+    
+    .DesignText {
+        transform: rotate(90deg);
+        color: #DDDDDD;
+        position: absolute;
+        font-family: mySecondFont;
+        font-size: 13em;
+        font-weight: 0.5;
+        margin-top: 170px;
+        z-index: -4;
+        margin-left: 250px;
+    }
+    
+    .rainy {
+        margin-left: 280px;
+        font-size: 15em;
+    }
+    
+    .circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 3;
+        position: absolute;
+    }
+    
+    .cloudy_circle {
+        background-color: #FCED6E;
+        margin-left: 500px;
+        margin-top: 155px;
+    }
+    
+    .deg_circle {
+        position: absolute;
+        background-color: #6A9FFB;
+        margin-top: 365px;
+        margin-left: 165px;
+    }
+    
+    .circle_text {
+        position: absolute;
+        padding-top: 40px;
+        padding-left: 20px;
+        font-size: 1.2em;
+        font-family: mySecondFont;
+    }
+    
+    .rainy_circle_text {
+        position: absolute;
+        padding-top: 40px;
+        padding-left: 20px;
+        font-size: 1.2em;
+        font-family: mySecondFont;
+        z-index: 4;
+    }
+    
+    .deg_text {
+        position: absolute;
+        padding-top: 40px;
+        padding-left: 40px;
+        font-size: 1.2em;
+        font-family: mySecondFont;
+    }
+    
+    .screenshotPoint2 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-right: 200px;
+        margin-left: 80px;
+        width: 40%;
+    }
+    
+    .screenshotPoint3 {
+        border: solid blue;
+        padding-top: 200px;
+        width: 40%;
+        padding-right: 80px;
+        padding-left: 100px;
+    }
+    
+    .screenshotPoint4 {
+        border: solid green;
+        padding-top: 100px;
+        width: 60%;
+    }
+    
+    .screenshot_image {
+        z-index: -2;
+        padding-left: 250px;
+    }
+    
+    .ss_content {
+        color: gray;
+        font-family: mySecondFont;
+        font-size: 1.53em;
+    }
+    
+    .ss_heading {
+        color: black;
+        font-family: myThirdFont;
+        font-size: 2em;
+    }
+    
+    .nine_deg_circle {
+        position: absolute;
+        background-color: #7691C8;
+        margin-top: 365px;
+        margin-left: 180px;
+    }
+    
+    .rainy_circle {
+        position: absolute;
+        background-color: #B7FBEE;
+        margin-left: 485px;
+        margin-top: 155px;
+    }
+    
+    .reviews {
+        color: black;
+    }
+    
+    .footer_section {
         background-color: #383856;
-        height:250px;
-
-
-}
-.footer-link{
-     color:#ABAEBB;
-}
-
-.rights_registered{
-    text-align: center;
-}
-.footer-nav:after {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid white;
-
-  }
-
-  .before_footer{
-        border:1px solid black;
+        height: 250px;
+    }
+    
+    .footer-link {
+        color: #ABAEBB;
+    }
+    
+    .rights_registered {
+        text-align: center;
+    }
+    
+    .footer-nav:after {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid white;
+    }
+    
+    .before_footer {
         background-image: url("images/downloadbg.png");
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-   
-  }
-
-  .inverted_comma{
-    color: #4679EB;
-  }
-
-  .reviews{
-    display: flex;
+    }
+    
+    .before_footer_content {
+        width: 32%;
+        margin-left: 200px;
+        margin-top: 100px;
+    }
+    
+    .before_footer_image {
+        margin-top: 150px;
+        margin-right: 200px;
+        width: 40%;
+    }
+    
+    #how_download {
+        font-size: 50px;
+        font-family: myThirdFont;
+    }
+    
+    #just_download {
+        font-family: myThirdFont;
+        font-size: 23px;
+        padding-right: 70px;
+    }
+    
+    .before_footer_icon {
+        width: 30%;
+    }
+    
+    .inverted_comma {
+        color: #4679EB;
+        font-size: 50px;
+    }
+    
+    .quote-right {
+        align-self: flex-end;
+        margin-right: 0px;
+        margin-left: 550px;
+    }
+    
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .review_content {
+        color: black;
+        font-size: 1.6em;
+        font-family: myThirdFont;
+        width: 90%;
+        border-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .review_section {
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
-        flex-wrap: wrap;
-        color:black;
-
-  }
+    }
+    
+    .author {
+        font-size: 1.3em;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .review_n1 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 200px;
+        padding-right: 30px;
+    }
+    
+    .review_n2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-right: 50px;
+        margin-right: 100px;
+    }
